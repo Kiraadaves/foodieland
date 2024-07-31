@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import { Images, Meal, Time } from "../collections";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 interface Recipe {
+  id: number;
   favorite: boolean;
   src: string;
   text1: string;
@@ -11,8 +13,9 @@ interface Recipe {
   meal: string;
 }
 
-const recipe1: Recipe[] = [
+export const recipe1: Recipe[] = [
   {
+    id: 0,
     favorite: true,
     src: "/recipe1.svg",
     text1: "Big and Juicy Wagyu Beef",
@@ -20,6 +23,7 @@ const recipe1: Recipe[] = [
     meal: "Snack",
   },
   {
+    id: 1,
     favorite: false,
     src: "/recipe2.svg",
     text1: "Fresh Lime Roasted Salmon with",
@@ -27,6 +31,7 @@ const recipe1: Recipe[] = [
     meal: "Fish",
   },
   {
+    id: 2,
     favorite: true,
     src: "/recipe3.svg",
     text1: "Strawberry Oatmeal Pancake",
@@ -34,6 +39,7 @@ const recipe1: Recipe[] = [
     meal: "Breakfast",
   },
   {
+    id: 3,
     favorite: false,
     src: "/recipe4.svg",
     text1: "Fresh and Healthy Mixed",
@@ -41,6 +47,7 @@ const recipe1: Recipe[] = [
     meal: "Healthy",
   },
   {
+    id: 4,
     favorite: true,
     src: "/recipe5.svg",
     text1: "Chicken Meatballs with Cream",
@@ -49,6 +56,7 @@ const recipe1: Recipe[] = [
   },
 
   {
+    id: 5,
     favorite: false,
     src: "/recipe6.svg",
     text1: "Fruity Pancake with Orange &",
@@ -56,6 +64,7 @@ const recipe1: Recipe[] = [
     meal: "Sweet",
   },
   {
+    id: 6,
     favorite: false,
     src: "/recipe7.svg",
     text1: "The Best Easy One Pot Chicken",
@@ -63,6 +72,7 @@ const recipe1: Recipe[] = [
     meal: "Snack",
   },
   {
+    id: 7,
     favorite: true,
     src: "/recipe8.svg",
     text1: "The Creamiest Creamy Chicken",
@@ -74,10 +84,10 @@ const recipe1: Recipe[] = [
 const MoreRecipes = () => {
   const [recipes, setRecipes] = useState(recipe1);
 
-  const toggleLike = (index: number) => {
+  const toggleLike = (id: number) => {
     setRecipes((prevRecipes: Recipe[]) =>
       prevRecipes.map((recipe, i) =>
-        i === index ? { ...recipe, favorite: !recipe.favorite } : recipe
+        i === id ? { ...recipe, favorite: !recipe.favorite } : recipe
       )
     );
   };
@@ -100,8 +110,9 @@ const MoreRecipes = () => {
       <div className="grid grid-cols-4 gap-8">
         {recipes.map((r, index) => {
           return (
-            <div
-              key={index}
+            <Link
+              href={`/recipes/${r.id}`}
+              key={r.id}
               className=" flex justify-center gap-6  pb-8 rounded-b-[24px] relative"
             >
               <div className="flex flex-col gap-6">
@@ -133,7 +144,7 @@ const MoreRecipes = () => {
                   />
                 </div>
               </Button>
-            </div>
+            </Link>
           );
         })}
       </div>

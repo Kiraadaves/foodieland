@@ -18,14 +18,25 @@ const Subscribe = () => {
         </div>
         <form className=" flex justify-center items-center">
           <div className="w-[480px] bg-[#ffffff] p-2 rounded-[24px]">
-            <input placeholder="Your email address..." className="pl-4 w-2/3" />
+            <input
+              placeholder="Your email address..."
+              className="pl-4 w-2/3 placeholder:text-sm placeholder:text-[#00000066] font-medium"
+            />
             <Button className="w-1/3 rounded-[16px] py-7 text-[#ffffff] text-sm font-semibold">
               Subscribe
             </Button>
           </div>
         </form>
-        <Images src={"/right.svg"} className={"absolute right-0 bottom-0 h-48 w-48"} alt={""} />
-        <Images src={"/left.svg"} className={"absolute left-0 bottom-0 h-64 w-64"} alt={""} />
+        <Images
+          src={"/right.svg"}
+          className={"absolute right-0 bottom-0 h-48 w-48 rounded-br-[60px]"}
+          alt={""}
+        />
+        <Images
+          src={"/left.svg"}
+          className={"absolute left-0 bottom-0 h-64 w-64 rounded-bl-[60px]"}
+          alt={""}
+        />
       </div>
     </section>
   );
