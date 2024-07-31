@@ -5,6 +5,8 @@ import { Images, Meal, Time } from "@/components/collections";
 import { Button } from "@/components/ui/button";
 import Categories from "@/components/sections/categories";
 import Recipes from "@/components/sections/recipes";
+import LearnMore from "@/components/sections/learnmore";
+import Instagram from "@/components/sections/instagram";
 
 const HomePage = () => {
   return (
@@ -85,6 +87,8 @@ const HomePage = () => {
       </section>
       <Categories />
       <Recipes />
+      <LearnMore />
+      <Instagram />
     </main>
   );
 };
