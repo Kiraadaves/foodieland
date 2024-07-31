@@ -7,6 +7,8 @@ import Categories from "@/components/sections/categories";
 import Recipes from "@/components/sections/recipes";
 import LearnMore from "@/components/sections/learnmore";
 import Instagram from "@/components/sections/instagram";
+import MoreRecipes from "@/components/sections/morerecipes";
+import Subscribe from "@/components/sections/subscribe";
 
 const HomePage = () => {
   return (
@@ -89,6 +91,8 @@ const HomePage = () => {
       <Recipes />
       <LearnMore />
       <Instagram />
+      <MoreRecipes />
+      <Subscribe />
     </main>
   );
 };

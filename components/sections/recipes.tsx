@@ -129,7 +129,7 @@ const Recipes = () => {
               </div>
               <Button
                 onClick={() => toggleLike(index)}
-                className="bg-transparent absolute right-10 top-6"
+                className="bg-transparent absolute right-7 top-6"
               >
                 <div className="h-10 w-10 bg-[#ffffff] rounded-full  flex justify-center items-center">
                   <Images

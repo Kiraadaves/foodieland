@@ -1,5 +1,7 @@
 import { Cutlery, TimeIcon } from "./svg";
 import Image from "next/image";
+import { Button } from "./ui/button";
+
 
 interface TimeProps {
   time: string;
