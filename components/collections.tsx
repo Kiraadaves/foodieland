@@ -85,3 +85,15 @@ export const PrintAndShare: React.FC<PrintAndShareProps> = ({ text, icon }) => {
     </div>
   );
 };
+
+export const Unticked = () => {
+  return (
+    <Images src={"/unticked.svg"} className={"w-5 h-5"} alt={"bulletpoint"} />
+  );
+};
+
+export const Ticked = () => {
+  return (
+    <Images src={"/ticked.svg"} className={"w-5 h-5"} alt={"bulletpoint"} />
+  );
+};

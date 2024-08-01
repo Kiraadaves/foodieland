@@ -46,7 +46,7 @@ const DetailsInfo: React.FC<DetailsProps> = ({
   src,
 }) => {
   return (
-    <section className="flex flex-col gap-16 px-[118px]">
+    <section className="flex flex-col gap-16 px-[68px]">
       <div className="flex justify-between items-center">
         <div className="flex flex-col gap-16">
           <h1 className="font-semibold text-[64px] leading-[77.45px] text-[#000000]">
@@ -102,11 +102,12 @@ const DetailsInfo: React.FC<DetailsProps> = ({
       <p className="text-left text-base leading-7 text-[#00000099]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud <br/>exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.<br/> Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        veniam, quis nostrud <br />
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur.
+        <br /> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
       </p>
     </section>
   );

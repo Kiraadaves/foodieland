@@ -89,7 +89,7 @@ const Recipes = () => {
   };
 
   return (
-    <section className="px-[118px] flex flex-col gap-12">
+    <section className="px-[68px] flex flex-col gap-12">
       <div className="flex flex-col gap-8 justify-center items-center">
         <h1 className="text-[#000000] text-center text-5xl font-semibold">
           Simple and tasty recipe

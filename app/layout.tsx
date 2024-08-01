@@ -24,7 +24,7 @@ export default function RootLayout({
             <Navigation />
           </div>
           <div className="">{children}</div>
-          <div className="hidden xl:block px-[118px]">
+          <div className="hidden xl:block px-[68px]">
             <Footer />
           </div>
         </div>

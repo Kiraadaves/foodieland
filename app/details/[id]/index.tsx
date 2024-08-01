@@ -3,6 +3,7 @@ import { PrintAndShare } from "@/components/Collections";
 import DetailsInfo from "@/components/sections/DetailsInfo";
 import DetailsMoreRecipes from "@/components/sections/DetailsMoreRecipe";
 import Directions from "@/components/sections/Directions";
+import Ingredients from "@/components/sections/Ingredients";
 import { recipe1 } from "@/components/sections/MoreRecipes";
 import Subscribe from "@/components/sections/Subscribe";
 import { useParams } from "next/navigation";
@@ -21,7 +22,7 @@ const RecipeDetail = () => {
   }
 
   return (
-    <div className=" flex flex-col gap-12">
+    <div className=" flex flex-col gap-20">
       <DetailsInfo
         heading={recipe.detailsHeading}
         prepTime={"15"}
@@ -29,6 +30,7 @@ const RecipeDetail = () => {
         meal={recipe.meal}
         src={recipe.src}
       />
+      <Ingredients />
       <Directions />
       <Subscribe />
       <DetailsMoreRecipes />

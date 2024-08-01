@@ -20,7 +20,7 @@ const images = [
 
 const Instagram = () => {
   return (
-    <section className="px-[118px] pb-20 flex flex-col gap-20 bg-custom-gradient-recipe">
+    <section className="px-[68px] pb-20 flex flex-col gap-20 bg-custom-gradient-recipe">
       <div className="flex flex-col gap-4">
         <h1 className="text-[#000000] text-5xl leading-[58.09px] font-semibold text-center">
           Check out @foodieland on Instagram

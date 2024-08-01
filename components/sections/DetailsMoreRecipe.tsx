@@ -27,7 +27,7 @@ const DetailsMoreRecipes = () => {
   };
 
   return (
-    <section className="px-[118px] flex flex-col gap-12">
+    <section className="px-[68px] flex flex-col gap-12">
       <h1 className="text-[#000000] text-center text-5xl font-semibold">
         You may like these recipes too
       </h1>

@@ -4,7 +4,7 @@ import { Images } from "../Collections";
 
 const Subscribe = () => {
   return (
-    <section className="px-[118px] ">
+    <section className="px-[68px] ">
       <div className="bg-[#E7F9FD] relative rounded-[60px] py-16 flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="text-[#000000] text-5xl leading-[58.09px] font-semibold text-center">

@@ -102,7 +102,7 @@ const MoreRecipes = () => {
   };
 
   return (
-    <section className="px-[118px] flex flex-col gap-12">
+    <section className="px-[68px] flex flex-col gap-12">
       <div className="flex  gap-8 justify-between">
         <h1 className="text-[#000000] text-left text-5xl font-semibold">
           Try this delicious recipe <br />

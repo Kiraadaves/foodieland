@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 const LearnMore = () => {
   return (
-    <section className="px-[118px] flex justify-between">
+    <section className="px-[68px] flex justify-between">
       <div className="w-1/2 flex items-center">
         <div className="flex gap-8 flex-col">
           <h1 className="font-semibold text-[#000000] text-5xl leading-[58.09px] ">

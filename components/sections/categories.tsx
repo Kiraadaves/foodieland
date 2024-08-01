@@ -56,7 +56,7 @@ const categories = [
 
 const Categories = () => {
   return (
-    <section className="px-[118px] flex flex-col gap-12">
+    <section className="px-[68px] flex flex-col gap-12">
       <div className="flex justify-between items-center">
         <p className="font-semibold text-5xl">Categories</p>
         <Button className="bg-[#E7FAFE] hover:bg-[#E7FAFE] rounded-[16px] text-base text-black font-semibold p-6 ">

@@ -5,7 +5,7 @@ import { Socials } from "./Links";
 
 const Navigation = () => {
   return (
-    <div className="bg-[#ffffff] flex pb-6 px-[118px] justify-between items-center border-b  border-solid border-[#0000001A]">
+    <div className="bg-[#ffffff] flex pb-6 px-[68px] justify-between items-center border-b  border-solid border-[#0000001A]">
       <div>
         <Foodieland />
       </div>
