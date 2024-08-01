@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
 import { Images, Meal, PrepAndCookTime, PrintAndShare } from "../Collections";
+import Link from "next/link";
 
 interface DetailsProps {
   heading: string;
@@ -68,10 +69,13 @@ const DetailsInfo: React.FC<DetailsProps> = ({
           <PrintAndShare text={"SHARE"} icon={"/share.svg"} />
         </div>
       </div>
-      <div className="flex gap-8">
+      <div className="flex gap-8 relative">
+        <Link href={"/"} className="absolute top-[37%] left-[28%]">
+          <Images src={"/playicon.svg"} className={" w-28 h-28 "} alt={""} />
+        </Link>
         <Images
           src={src}
-          className={"w-2/3 h-[600px] rounded-[24px]"}
+          className={"w-2/3 h-[600px] rounded-[64px]"}
           alt={""}
         />
         <div className="flex flex-col p-6 justify-between w-1/3 h-[600px] bg-[#E7FAFE] rounded-[24px]">
