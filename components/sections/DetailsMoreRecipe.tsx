@@ -35,8 +35,7 @@ const DetailsMoreRecipes = () => {
       <div className="grid grid-cols-4 gap-8">
         {recipes.slice(0, 4).map((r, index) => {
           return (
-            <Link
-              href={`/details/${r.id}`}
+            <div
               key={r.id}
               className=" flex justify-center gap-6  pb-8 rounded-b-[24px] relative"
             >
@@ -47,11 +46,14 @@ const DetailsMoreRecipes = () => {
                   className="h-[258px]  rounded-[28px] w-full"
                   alt={"burger"}
                 />
-                <p className="font-semibold text-lg text-[#000000]">
+                <Link
+                  href={`/details/${r.id}`}
+                  className="font-semibold text-lg text-[#000000]"
+                >
                   {r.text1}
                   <br />
                   {r.text2}
-                </p>
+                </Link>
                 <div className="flex gap-8">
                   <Time time={"30"} />
                   <Meal meal={r.meal || "Meal"} />
@@ -69,7 +71,7 @@ const DetailsMoreRecipes = () => {
                   />
                 </div>
               </Button>
-            </Link>
+            </div>
           );
         })}
       </div>
