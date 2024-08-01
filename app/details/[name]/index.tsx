@@ -1,22 +1,37 @@
 "use client";
-import { PrintAndShare } from "@/components/Collections";
 import DetailsInfo from "@/components/sections/DetailsInfo";
 import DetailsMoreRecipes from "@/components/sections/DetailsMoreRecipe";
 import Directions from "@/components/sections/Directions";
 import Ingredients from "@/components/sections/Ingredients";
-import { recipe1 } from "@/components/sections/MoreRecipes";
+import { combinedRecipes } from "@/components/array";
 import Subscribe from "@/components/sections/Subscribe";
 import { useParams } from "next/navigation";
 
-const RecipeDetail = () => {
-  const { id } = useParams();
+interface Recipe {
+  id: number;
+  favorite: boolean;
+  src: string;
+  text1: string;
+  text2: string;
+  meal: string;
+  detailsHeading: string;
+  name: string;
+}
 
-  if (!id) {
+const RecipeDetail = () => {
+  const { name } = useParams();
+
+  if (!name || typeof name !== "string") {
     return <div>Loading...</div>;
   }
-  const recipeId = Number(id);
+  let recipe: Recipe | undefined;
+  combinedRecipes.some((recipeArray) => {
+    recipe = recipeArray.find(
+      (r) => r.name.toLowerCase() === name.toLowerCase()
+    );
+    return recipe !== undefined;
+  });
 
-  const recipe = recipe1.find((r) => r.id === recipeId);
   if (!recipe) {
     return <div>Recipe not found</div>;
   }

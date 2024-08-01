@@ -2,86 +2,14 @@
 import React, { useState } from "react";
 import { Images, Meal, Time } from "../Collections";
 import { Button } from "../ui/button";
-
-interface Recipe {
-  favorite: boolean;
-  src: string;
-  text1: string;
-  text2: string;
-  meal: string;
-}
-
-const recipe1: Recipe[] = [
-  {
-    favorite: true,
-    src: "/burger.svg",
-    text1: "Big and Juicy Wagyu Beef",
-    text2: "Cheeseburger",
-    meal: "Snack",
-  },
-  {
-    favorite: false,
-    src: "/salmon2.svg",
-    text1: "Fresh Lime Roasted Salmon with",
-    text2: "Ginger Sauce",
-    meal: "Fish",
-  },
-  {
-    favorite: false,
-    src: "/pancake.svg",
-    text1: "Strawberry Oatmeal Pancake",
-    text2: "with Honey Syrup",
-    meal: "Breakfast",
-  },
-  {
-    favorite: true,
-    src: "/mayonnaise.svg",
-    text1: "Fresh and Healthy Mixed",
-    text2: "Mayonnaise Salad",
-    meal: "Healthy",
-  },
-  {
-    favorite: false,
-    src: "/meatballs.svg",
-    text1: "Chicken Meatballs with Cream",
-    text2: "Cheese",
-    meal: "Meat",
-  },
-  {
-    favorite: false,
-    src: "/ads.svg",
-    text1: "",
-    text2: "",
-    meal: "",
-  },
-  {
-    favorite: true,
-    src: "/pancake.svg",
-    text1: "Fruity Pancake with Orange &",
-    text2: "Blueberry",
-    meal: "Sweet",
-  },
-  {
-    favorite: false,
-    src: "/chicken.svg",
-    text1: "The Best Easy One Pot Chicken",
-    text2: "and Rice",
-    meal: "Snack",
-  },
-  {
-    favorite: false,
-    src: "/pasta.svg",
-    text1: "The Creamiest Creamy Chicken",
-    text2: "and Bacon Pasta",
-    meal: "Noodles",
-  },
-];
+import { combinedRecipes } from "../array";
+import Link from "next/link";
 
 const Recipes = () => {
-  const [recipes, setRecipes] = useState(recipe1);
+  const [recipes, setRecipes] = useState(combinedRecipes[0]);
 
   const toggleLike = (index: number) => {
-    setRecipes((prevRecipes: Recipe[]) =>
+    setRecipes((prevRecipes) =>
       prevRecipes.map((recipe, i) =>
         i === index ? { ...recipe, favorite: !recipe.favorite } : recipe
       )
@@ -117,11 +45,14 @@ const Recipes = () => {
                   className="h-[258px]  rounded-[28px] w-full"
                   alt={"burger"}
                 />
-                <p className="font-semibold text-2xl text-[#000000]">
+                <Link
+                  href={`/details/${r.name}`}
+                  className="font-semibold text-2xl text-[#000000]"
+                >
                   {r.text1}
                   <br />
                   {r.text2}
-                </p>
+                </Link>
                 <div className="flex gap-8">
                   <Time time={"30"} />
                   <Meal meal={r.meal || "Meal"} />

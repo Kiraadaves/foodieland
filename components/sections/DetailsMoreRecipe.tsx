@@ -3,23 +3,13 @@ import React, { useState } from "react";
 import { Images, Meal, Time } from "../Collections";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { recipe1 } from "./MoreRecipes";
-
-interface Recipe {
-  id: number;
-  favorite: boolean;
-  src: string;
-  text1: string;
-  text2: string;
-  meal: string;
-  detailsHeading: string;
-}
+import { combinedRecipes } from "../array";
 
 const DetailsMoreRecipes = () => {
-  const [recipes, setRecipes] = useState(recipe1);
+  const [recipes, setRecipes] = useState(combinedRecipes[1]);
 
   const toggleLike = (id: number) => {
-    setRecipes((prevRecipes: Recipe[]) =>
+    setRecipes((prevRecipes) =>
       prevRecipes.map((recipe, i) =>
         i === id ? { ...recipe, favorite: !recipe.favorite } : recipe
       )
@@ -47,7 +37,7 @@ const DetailsMoreRecipes = () => {
                   alt={"burger"}
                 />
                 <Link
-                  href={`/details/${r.id}`}
+                  href={`/details/${r.name}`}
                   className="font-semibold text-lg text-[#000000]"
                 >
                   {r.text1}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "../ui/button";
-import { Images, Ticked, Unticked } from "../Collections";
+import { Ticked, Unticked } from "../Collections";
 
 interface List {
   isTicked: boolean;

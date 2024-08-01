@@ -77,12 +77,12 @@ export const PrepAndCookTime: React.FC<PrepAndCookTimeProps> = ({
 
 export const PrintAndShare: React.FC<PrintAndShareProps> = ({ text, icon }) => {
   return (
-    <div className="relative flex flex-col items-center gap-4 w-24">
+    <button className="relative flex flex-col items-center gap-4 w-24">
       <div className="h-16 w-16 bg-[#E7FAFE] rounded-full  flex justify-center items-center">
         <Images src={icon} className={" h-4 w-4"} alt={"favorite"} />
       </div>
       <p className="text-[#000000] font-medium text-xs text-center">{text}</p>
-    </div>
+    </button>
   );
 };
 
