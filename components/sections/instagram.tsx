@@ -1,6 +1,5 @@
 import React from "react";
-import { Button } from "../ui/button";
-import { Images } from "../collections";
+import { Images } from "../Collections";
 import Link from "next/link";
 import { Instagram2 } from "../svg";
 
@@ -33,8 +32,8 @@ const Instagram = () => {
         </p>
       </div>
       <div className="grid grid-cols-4 gap-8">
-        {images.map((i) => (
-          <Images src={i.src} className={""} alt={""} />
+        {images.map((i, index) => (
+          <Images key={index} src={i.src} className={""} alt={""} />
         ))}
       </div>
       <div className="flex justify-center items-center">

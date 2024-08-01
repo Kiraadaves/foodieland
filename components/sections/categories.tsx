@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { Images } from "../collections";
+import { Images } from "../Collections";
 import Link from "next/link";
 
 const categories = [

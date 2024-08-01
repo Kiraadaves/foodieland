@@ -1,5 +1,5 @@
 import React from "react";
-import { Images } from "../collections";
+import { Images } from "../Collections";
 import { Button } from "../ui/button";
 
 const LearnMore = () => {

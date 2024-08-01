@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Images, Meal, Time } from "../collections";
+import { Images, Meal, Time } from "../Collections";
 import { Button } from "../ui/button";
 
 interface Recipe {

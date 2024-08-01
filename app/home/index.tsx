@@ -1,24 +1,31 @@
 import React from "react";
 import Image from "next/image";
 import { Rectangle6, HotRecipes, Rectangle5 } from "@/components/svg";
-import { Images, Meal, Time } from "@/components/collections";
 import { Button } from "@/components/ui/button";
-import Categories from "@/components/sections/categories";
-import Recipes from "@/components/sections/recipes";
-import LearnMore from "@/components/sections/learnmore";
-import Instagram from "@/components/sections/instagram";
-import MoreRecipes from "@/components/sections/morerecipes";
-import Subscribe from "@/components/sections/subscribe";
+import { Images, Meal, Time } from "@/components/Collections";
+import Categories from "@/components/sections/Categories";
+import Recipes from "@/components/sections/Recipes";
+import LearnMore from "@/components/sections/Learnmore";
+import Instagram from "@/components/sections/Instagram";
+import MoreRecipes from "@/components/sections/MoreRecipes";
+import Subscribe from "@/components/sections/Subscribe";
+import Profile from "@/components/sections/Profile";
 
 const HomePage = () => {
   return (
-    <main className="flex min-h-screen flex-col gap-16">
+    <div className="flex min-h-screen flex-col gap-16">
       <section className="flex justify-between">
         <div className="py-8">
           <Rectangle6 />
         </div>
-        <div className="flex w-[1280px]">
+        <div className="flex w-[1280px] relative">
           <div className="relative w-1/2 bg-[#E7FAFE] rounded-l-[48px]">
+            <Images
+              src={"/badge.svg"}
+              className={"absolute top-8 right-[-60px] w-24 h-24"}
+              alt={"badge"}
+            />
+
             <div className="absolute top-16 left-16 flex flex-col gap-16 justify-between">
               <div className="flex flex-col gap-6">
                 <div className="flex bg-[#ffffff] rounded-[30px] py-4 px-6 gap-4 w-[170px]">
@@ -46,21 +53,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="flex justify-between items-center">
-                <div className="flex items-center gap-2">
-                  <Images
-                    src="/johnsmith.svg"
-                    alt="John Smith"
-                    className="h-8 w-8"
-                  />
-                  <div>
-                    <p className="text-[#000000] text-base font-bold">
-                      John Smith
-                    </p>
-                    <p className="text-[#00000099] font-medium text-sm">
-                      15 March 2022
-                    </p>
-                  </div>
-                </div>
+                <Profile />
                 <Button className="flex gap-4 py-6 px-6 rounded-[16px]">
                   <p>View Recipes</p>{" "}
                   <Images
@@ -93,7 +86,7 @@ const HomePage = () => {
       <Instagram />
       <MoreRecipes />
       <Subscribe />
-    </main>
+    </div>
   );
 };
 

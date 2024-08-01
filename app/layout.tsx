@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer";
-import Navigation from "@/components/navigation";
+import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="py-6 h-screen gap-16 flex flex-col ">
-          <div className="">
+          <div className="hidden xl:block">
             <Navigation />
           </div>
           <div className="">{children}</div>
-          <div className="px-[118px]">
+          <div className="hidden xl:block px-[118px]">
             <Footer />
           </div>
         </div>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Images, Meal, Time } from "../collections";
+import { Images, Meal, Time } from "../Collections";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
@@ -11,6 +11,7 @@ interface Recipe {
   text1: string;
   text2: string;
   meal: string;
+  detailsHeading: string;
 }
 
 export const recipe1: Recipe[] = [
@@ -18,66 +19,74 @@ export const recipe1: Recipe[] = [
     id: 0,
     favorite: true,
     src: "/recipe1.svg",
-    text1: "Big and Juicy Wagyu Beef",
-    text2: "Cheeseburger",
-    meal: "Snack",
+    text1: "Mixed Tropical Fruit Salad with",
+    text2: "Superfood Boosts",
+    meal: "Health",
+    detailsHeading: "Mixed Tropical Fruit Salad",
   },
   {
     id: 1,
     favorite: false,
     src: "/recipe2.svg",
-    text1: "Fresh Lime Roasted Salmon with",
-    text2: "Ginger Sauce",
-    meal: "Fish",
+    text1: "Big and Juicy Wagyu Beef",
+    text2: "Cheeseburger",
+    meal: "Western",
+    detailsHeading: "Juicy Wagyu Beef Cheeseburger",
   },
   {
     id: 2,
     favorite: true,
     src: "/recipe3.svg",
-    text1: "Strawberry Oatmeal Pancake",
-    text2: "with Honey Syrup",
-    meal: "Breakfast",
+    text1: "Healthy Japanese Fried Rice with",
+    text2: "Asparagus",
+    meal: "Healthy",
+    detailsHeading: "Healthy Japanese Fried Rice",
   },
   {
     id: 3,
     favorite: false,
     src: "/recipe4.svg",
-    text1: "Fresh and Healthy Mixed",
-    text2: "Mayonnaise Salad",
-    meal: "Healthy",
+    text1: "Cauliflower Walnut Vegeterian Taco Meat",
+    text2: "",
+    meal: "Eastern",
+    detailsHeading: "Cauliflower Walnut Vegeterian Taco",
   },
   {
     id: 4,
     favorite: true,
     src: "/recipe5.svg",
-    text1: "Chicken Meatballs with Cream",
-    text2: "Cheese",
-    meal: "Meat",
+    text1: "Rainbow Chicken Salad with",
+    text2: "Almond Honey Mustard Dressing",
+    meal: "Healthy",
+    detailsHeading: "Rainbow Chicken Salad",
   },
 
   {
     id: 5,
     favorite: false,
     src: "/recipe6.svg",
-    text1: "Fruity Pancake with Orange &",
-    text2: "Blueberry",
-    meal: "Sweet",
+    text1: "Barbecue Spicy Sandwiches",
+    text2: "with Chips",
+    meal: "Snack",
+    detailsHeading: "Barbecue Spicy Sandwiches with Chips",
   },
   {
     id: 6,
     favorite: false,
     src: "/recipe7.svg",
-    text1: "The Best Easy One Pot Chicken",
-    text2: "and Rice",
-    meal: "Snack",
+    text1: "Firecracker Vegan Lettuce Wraps-",
+    text2: "Spicy!",
+    meal: "Seafood",
+    detailsHeading: "Firecracker Vegan Lettuce Wraps",
   },
   {
     id: 7,
     favorite: true,
     src: "/recipe8.svg",
-    text1: "The Creamiest Creamy Chicken",
-    text2: "and Bacon Pasta",
-    meal: "Noodles",
+    text1: "Chicken Ramen Soup with",
+    text2: "Mushroom",
+    meal: "Japanese",
+    detailsHeading: "Chicken Ramen Soup with Mushroom",
   },
 ];
 
@@ -111,7 +120,7 @@ const MoreRecipes = () => {
         {recipes.map((r, index) => {
           return (
             <Link
-              href={`/recipes/${r.id}`}
+              href={`/details/${r.id}`}
               key={r.id}
               className=" flex justify-center gap-6  pb-8 rounded-b-[24px] relative"
             >

@@ -1,7 +1,7 @@
 import React from "react";
 import { Foodieland } from "./svg";
 import Link from "next/link";
-import { Socials } from "./links";
+import { Socials } from "./Links";
 
 const Footer = () => {
   return (
