@@ -29,7 +29,7 @@ const others = [
 
 const Ingredients = () => {
   return (
-    <section className="px-[68px] flex justify-between">
+    <section className="px-[68px] flex gap-12 justify-between">
       <div className="w-[75%]">
         <MainDish />
       </div>
@@ -44,7 +44,7 @@ const Ingredients = () => {
                 <Link href={"/"} key={i.id} className="flex gap-6">
                   <Images
                     src={i.src}
-                    className={"w-64 rounded-[24px]"}
+                    className={"w-44 rounded-[24px]"}
                     alt={"otherrecipes"}
                   />
                   <div className="flex items-center">

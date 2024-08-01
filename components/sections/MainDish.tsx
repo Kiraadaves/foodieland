@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "../ui/button";
-import { Images } from "../Collections";
+import { Images, Ticked, Unticked } from "../Collections";
 
 interface List {
   isTicked: boolean;
@@ -42,24 +42,54 @@ const MainDish = () => {
   const toggleTicked = (id: number) => {
     setList((prevList: List[]) =>
       prevList.map((newList, i) =>
-        i === id ? { ...newList, favorite: !newList.isTicked } : newList
+        i === id ? { ...newList, isTicked: !newList.isTicked } : newList
       )
     );
   };
   return (
-    <div className="flex flex-col gap-8">
-      <h1>Ingredients</h1>
-      <div>
-        <p>For main dish</p>
+    <div className="flex flex-col gap-16">
+      <h1 className="text-4xl text-[#000000] font-medium">Ingredients</h1>
+      <div className="flex flex-col gap-6">
+        <p className="text-[#000000] font-semibold text-2xl">For main dish</p>
         {list.map((i, index) => (
-          <Button onClick={() => toggleTicked(index)} key={i.id}>
-            <Images src={""} className={""} alt={""} />
-            <p className={``}>{i.text}</p>
-          </Button>
+          <button
+            onClick={() => toggleTicked(index)}
+            key={i.id}
+            className="bg-transparent flex items-center gap-6 border-b border-solid pb-6"
+          >
+            {i.isTicked ? <Ticked /> : <Unticked />}
+            <p
+              className={`${
+                i.isTicked
+                  ? "text-[#00000099] text-base line-through decoration-[#00000099]"
+                  : "text-[#000000] text-lg"
+              }`}
+            >
+              {i.text}
+            </p>
+          </button>
         ))}
       </div>
-      <div>
-        <p>For the sauce</p>
+      <div className="flex flex-col gap-6">
+        <p className="text-[#000000] font-semibold text-2xl">For the sauce</p>
+        {list.slice(1, 4).map((i, index) => (
+          <button
+            onClick={() => toggleTicked(index)}
+            key={i.id}
+            className="bg-transparent flex items-center gap-6 border-b border-solid pb-6"
+          >
+            {i.isTicked ? <Ticked /> : <Unticked />}
+            <p
+              className={`${
+                i.isTicked
+                  ? "text-[#00000099] text-base line-through decoration-[#00000099]"
+                  : "text-[#000000] text-lg"
+              }`}
+            >
+              {i.text}
+            </p>
+          </button>
+        ))}
       </div>
     </div>
   );
