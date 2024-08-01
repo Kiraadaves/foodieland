@@ -1,5 +1,5 @@
 import React from "react";
-import { Images, Unticked } from "../Collections";
+import { Images, Unticked } from "../collections";
 
 const Directions = () => {
   return (

@@ -4,7 +4,7 @@ import DetailsMoreRecipes from "@/components/sections/DetailsMoreRecipe";
 import Directions from "@/components/sections/Directions";
 import Ingredients from "@/components/sections/Ingredients";
 import { combinedRecipes } from "@/components/array";
-import Subscribe from "@/components/sections/Subscribe";
+import Subscribe from "@/components/sections/subscribe";
 import { useParams } from "next/navigation";
 
 interface Recipe {

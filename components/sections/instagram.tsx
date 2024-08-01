@@ -1,5 +1,5 @@
 import React from "react";
-import { Images } from "../Collections";
+import { Images } from "../collections";
 import Link from "next/link";
 import { Instagram2 } from "../svg";
 

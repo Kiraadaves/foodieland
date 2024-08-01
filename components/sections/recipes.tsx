@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Images, Meal, Time } from "../Collections";
+import { Images, Meal, Time } from "../collections";
 import { Button } from "../ui/button";
 import { combinedRecipes } from "../array";
 import Link from "next/link";

@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { Rectangle6, HotRecipes, Rectangle5 } from "@/components/svg";
 import { Button } from "@/components/ui/button";
-import { Images, Meal, Time } from "@/components/Collections";
-import Categories from "@/components/sections/Categories";
-import Recipes from "@/components/sections/Recipes";
-import LearnMore from "@/components/sections/Learnmore";
-import Instagram from "@/components/sections/Instagram";
-import MoreRecipes from "@/components/sections/MoreRecipes";
-import Subscribe from "@/components/sections/Subscribe";
+import { Images, Meal, Time } from "@/components/collections";
+import Categories from "@/components/sections/categories";
+import Recipes from "@/components/sections/recipes";
+import LearnMore from "@/components/sections/learnmore";
+import Instagram from "@/components/sections/instagram";
+import MoreRecipes from "@/components/sections/morerecipes";
+import Subscribe from "@/components/sections/subscribe";
 import Profile from "@/components/sections/Profile";
 
 const HomePage = () => {

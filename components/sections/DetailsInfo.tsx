@@ -1,6 +1,6 @@
 import React from "react";
 import Profile from "./Profile";
-import { Images, Meal, PrepAndCookTime, PrintAndShare } from "../Collections";
+import { Images, Meal, PrepAndCookTime, PrintAndShare } from "../collections";
 import Link from "next/link";
 
 interface DetailsProps {
