@@ -1,5 +1,5 @@
 import React from "react";
-import { Images } from "../collections";
+import Image from "next/image";
 import Link from "next/link";
 import MainDish from "./MainDish";
 
@@ -42,7 +42,10 @@ const Ingredients = () => {
             <div className="flex flex-col gap-6">
               {others.map((i) => (
                 <Link href={"/"} key={i.id} className="flex gap-6">
-                  <Images
+                  <Image
+                    width={500}
+                    height={300}
+                    priority
                     src={i.src}
                     className={"w-44 rounded-[24px]"}
                     alt={"otherrecipes"}
@@ -64,7 +67,14 @@ const Ingredients = () => {
             </div>
           </div>
           <div>
-            <Images src={"/ads.svg"} className={""} alt={"ads"} />
+            <Image
+              width={500}
+              height={300}
+              priority
+              src={"/ads.svg"}
+              className={""}
+              alt={"ads"}
+            />
           </div>
         </div>
       </div>

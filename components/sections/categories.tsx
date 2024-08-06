@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { Images } from "../collections";
+import Image from "next/image";
 import Link from "next/link";
 
 const categories = [
@@ -74,7 +74,10 @@ const Categories = () => {
               {" "}
               <div className="flex flex-col  justify-between h-48 absolute bottom-[20%]">
                 {" "}
-                <Images
+                <Image
+                 width={500}
+                  height={300}
+                  priority
                   src={category.src}
                   alt={category.alt}
                   className={"h-[7.5rem] w-[7.5rem]  "}

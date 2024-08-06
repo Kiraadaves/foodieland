@@ -1,5 +1,5 @@
 import React from "react";
-import { Images } from "../collections";
+import Image from "next/image";
 import Link from "next/link";
 import { Instagram2 } from "../svg";
 
@@ -33,7 +33,15 @@ const Instagram = () => {
       </div>
       <div className="grid grid-cols-4 gap-8">
         {images.map((i, index) => (
-          <Images key={index} src={i.src} className={""} alt={""} />
+          <Image
+            key={index}
+            src={i.src}
+            className={""}
+            priority
+            width={500}
+            height={300}
+            alt={""}
+          />
         ))}
       </div>
       <div className="flex justify-center items-center">

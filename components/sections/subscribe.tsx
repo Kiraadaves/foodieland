@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { Images } from "../collections";
-
+import Image from "next/image";
 const Subscribe = () => {
   return (
     <section className="px-[68px] ">
@@ -27,12 +26,18 @@ const Subscribe = () => {
             </Button>
           </div>
         </form>
-        <Images
+        <Image
+          width={500}
+          height={300}
+          priority
           src={"/right.svg"}
           className={"absolute right-0 bottom-0 h-48 w-48 rounded-br-[60px]"}
           alt={""}
         />
-        <Images
+        <Image
+          width={500}
+          height={300}
+          priority
           src={"/left.svg"}
           className={"absolute left-0 bottom-0 h-64 w-64 rounded-bl-[60px]"}
           alt={""}

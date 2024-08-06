@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import { Images, Meal, Time } from "../collections";
+import { Meal, Time } from "../collections";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { combinedRecipes } from "../array";
-
+import Image from "next/image";
 const DetailsMoreRecipes = () => {
   const [recipes, setRecipes] = useState(combinedRecipes[1]);
 
@@ -31,7 +31,10 @@ const DetailsMoreRecipes = () => {
             >
               <div className="flex flex-col gap-6">
                 {" "}
-                <Images
+                <Image
+                  width={500}
+                  height={300}
+                  priority
                   src={r.src}
                   className="h-[258px]  rounded-[28px] w-full"
                   alt={"burger"}
@@ -54,7 +57,10 @@ const DetailsMoreRecipes = () => {
                 className="bg-transparent absolute right-2 top-6"
               >
                 <div className="h-10 w-10 bg-[#ffffff] rounded-full  flex justify-center items-center">
-                  <Images
+                  <Image
+                    width={500}
+                    height={300}
+                    priority
                     src={r.favorite ? "/redlove.svg" : "/love.svg"}
                     className={" h-4 w-4"}
                     alt={"favorite"}

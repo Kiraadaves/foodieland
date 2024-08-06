@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Rectangle6, HotRecipes, Rectangle5 } from "@/components/svg";
 import { Button } from "@/components/ui/button";
-import { Images, Meal, Time } from "@/components/collections";
+import { Meal, Time } from "@/components/collections";
 import Categories from "@/components/sections/categories";
 import Recipes from "@/components/sections/recipes";
 import LearnMore from "@/components/sections/learnmore";
@@ -20,7 +20,10 @@ const HomePage = () => {
         </div>
         <div className="flex w-[1280px] relative">
           <div className="relative w-1/2 bg-[#E7FAFE] rounded-l-[48px]">
-            <Images
+            <Image
+              priority
+              width={500}
+              height={300}
               src={"/badge.svg"}
               className={"absolute top-8 right-[-60px] w-24 h-24"}
               alt={"badge"}
@@ -56,7 +59,10 @@ const HomePage = () => {
                 <Profile />
                 <Button className="flex gap-4 py-6 px-6 rounded-[16px]">
                   <p>View Recipes</p>{" "}
-                  <Images
+                  <Image
+                    width={500}
+                    height={300}
+                    priority
                     src="/playcircle.svg"
                     alt="Play Circle"
                     className="h-4 w-4"
@@ -70,7 +76,7 @@ const HomePage = () => {
               src="/mask-group.png"
               alt=""
               width={500}
-              height={500}
+              height={300}
               priority
               className="h-full w-full"
             />

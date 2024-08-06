@@ -1,6 +1,6 @@
 import React from "react";
-import { Images, Unticked } from "../collections";
-
+import { Unticked } from "../collections";
+import Image from "next/image";
 const Directions = () => {
   return (
     <section className="px-[68px]">
@@ -21,7 +21,14 @@ const Directions = () => {
               eius modi tempora incidunt ut labore
               <br /> et dolore magnam aliquam quaerat voluptatem.
             </p>
-            <Images src={"/directions.svg"} className={"w-full"} alt={""} />
+            <Image
+              width={500}
+              height={300}
+              priority
+              src={"/directions.svg"}
+              className={"w-full"}
+              alt={""}
+            />
             <p className="text-[#00000099] text-base leading-[26px]">
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni

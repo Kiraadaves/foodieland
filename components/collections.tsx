@@ -14,29 +14,10 @@ interface MealProps {
   meal: string;
 }
 
-interface ImageProps {
-  src: string;
-  className: string;
-  alt: string;
-}
-
 interface PrepAndCookTimeProps {
   heading: string;
   time: string;
 }
-
-export const Images: React.FC<ImageProps> = ({ src, className, alt }) => {
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={500}
-      height={500}
-      priority
-      className={className}
-    />
-  );
-};
 
 export const Time: React.FC<TimeProps> = ({ time }) => {
   return (
@@ -79,7 +60,14 @@ export const PrintAndShare: React.FC<PrintAndShareProps> = ({ text, icon }) => {
   return (
     <button className="relative flex flex-col items-center gap-4 w-24">
       <div className="h-16 w-16 bg-[#E7FAFE] rounded-full  flex justify-center items-center">
-        <Images src={icon} className={" h-4 w-4"} alt={"favorite"} />
+        <Image
+          priority
+          width={500}
+          height={300}
+          src={icon}
+          className={" h-4 w-4"}
+          alt={"favorite"}
+        />
       </div>
       <p className="text-[#000000] font-medium text-xs text-center">{text}</p>
     </button>
@@ -88,12 +76,26 @@ export const PrintAndShare: React.FC<PrintAndShareProps> = ({ text, icon }) => {
 
 export const Unticked = () => {
   return (
-    <Images src={"/unticked.svg"} className={"w-5 h-5"} alt={"bulletpoint"} />
+    <Image
+      priority
+      width={500}
+      height={300}
+      src={"/unticked.svg"}
+      className={"w-5 h-5"}
+      alt={"bulletpoint"}
+    />
   );
 };
 
 export const Ticked = () => {
   return (
-    <Images src={"/ticked.svg"} className={"w-5 h-5"} alt={"bulletpoint"} />
+    <Image
+      priority
+      width={500}
+      height={300}
+      src={"/ticked.svg"}
+      className={"w-5 h-5"}
+      alt={"bulletpoint"}
+    />
   );
 };

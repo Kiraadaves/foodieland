@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Images, Meal, Time } from "../collections";
+import { Meal, Time } from "../collections";
+import Image from "next/image";
 import { Button } from "../ui/button";
 import { combinedRecipes } from "../array";
 import Link from "next/link";
@@ -31,7 +32,17 @@ const Recipes = () => {
       <div className="grid grid-cols-3 gap-8">
         {recipes.map((r, index) => {
           if (index === 5) {
-            return <Images key={index} src={r.src} className={""} alt={""} />;
+            return (
+              <Image
+                width={500}
+                height={300}
+                priority
+                key={index}
+                src={r.src}
+                className={""}
+                alt={""}
+              />
+            );
           }
           return (
             <div
@@ -40,7 +51,10 @@ const Recipes = () => {
             >
               <div className="flex flex-col gap-6">
                 {" "}
-                <Images
+                <Image
+                  width={500}
+                  height={300}
+                  priority
                   src={r.src}
                   className="h-[258px]  rounded-[28px] w-full"
                   alt={"burger"}
@@ -63,7 +77,10 @@ const Recipes = () => {
                 className="bg-transparent absolute right-7 top-6"
               >
                 <div className="h-10 w-10 bg-[#ffffff] rounded-full  flex justify-center items-center">
-                  <Images
+                  <Image
+                    width={500}
+                    height={300}
+                    priority
                     src={r.favorite ? "/redlove.svg" : "/love.svg"}
                     className={" h-4 w-4"}
                     alt={"favorite"}

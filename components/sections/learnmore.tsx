@@ -1,5 +1,5 @@
 import React from "react";
-import { Images } from "../collections";
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 const LearnMore = () => {
@@ -23,7 +23,14 @@ const LearnMore = () => {
         </div>
       </div>
       <div className="w-1/2">
-        <Images src={"/learnmore.svg"} className={"w-full"} alt={""} />
+        <Image
+          width={500}
+          height={300}
+          priority
+          src={"/learnmore.svg"}
+          className={"w-full"}
+          alt={""}
+        />
       </div>
     </section>
   );

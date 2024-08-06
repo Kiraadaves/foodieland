@@ -1,8 +1,8 @@
 import React from "react";
 import Profile from "./Profile";
-import { Images, Meal, PrepAndCookTime, PrintAndShare } from "../collections";
+import { Meal, PrepAndCookTime, PrintAndShare } from "../collections";
 import Link from "next/link";
-
+import Image from "next/image";
 interface DetailsProps {
   heading: string;
   prepTime: string;
@@ -71,9 +71,19 @@ const DetailsInfo: React.FC<DetailsProps> = ({
       </div>
       <div className="flex gap-8 relative">
         <Link href={"/"} className="absolute top-[37%] left-[28%]">
-          <Images src={"/playicon.svg"} className={" w-28 h-28 "} alt={""} />
+          <Image
+            width={500}
+            height={300}
+            priority
+            src={"/playicon.svg"}
+            className={" w-28 h-28 "}
+            alt={""}
+          />
         </Link>
-        <Images
+        <Image
+          width={500}
+          height={300}
+          priority
           src={src}
           className={"w-2/3 h-[600px] rounded-[64px]"}
           alt={""}
