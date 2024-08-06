@@ -77,7 +77,7 @@ const DetailsInfo: React.FC<DetailsProps> = ({
             priority
             src={"/playicon.svg"}
             className={" w-28 h-28 "}
-            alt={""}
+            alt={"image"}
           />
         </Link>
         <Image
@@ -85,8 +85,8 @@ const DetailsInfo: React.FC<DetailsProps> = ({
           height={300}
           priority
           src={src}
-          className={"w-2/3 h-[600px] rounded-[64px]"}
-          alt={""}
+          className={"w-2/3 h-[600px] rounded-[24px]"}
+          alt={"image"}
         />
         <div className="flex flex-col p-6 justify-between w-1/3 h-[600px] bg-[#E7FAFE] rounded-[24px]">
           <div className="flex flex-col gap-7">

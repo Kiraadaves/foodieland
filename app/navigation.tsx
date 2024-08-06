@@ -6,16 +6,16 @@ import { Socials } from "../components/links";
 const Navigation = () => {
   return (
     <div className="bg-[#ffffff] flex pb-6 px-[68px] justify-between items-center border-b  border-solid border-[#0000001A]">
-      <div>
+      <Link href={"/"}>
         <Foodieland />
-      </div>
+      </Link>
       <nav>
         <ul className="flex gap-12 text-[#000000] font-medium text-base">
           <li>
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/recipe">Recipe</Link>
+            <Link href="#recipe">Recipe</Link>
           </li>
           <li>
             <Link href="/blog">Blog</Link>

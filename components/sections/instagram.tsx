@@ -5,16 +5,16 @@ import { Instagram2 } from "../svg";
 
 const images = [
   {
-    src: "/post1.svg",
+    src: "/post1.png",
   },
   {
-    src: "/post2.svg",
+    src: "/post2.png",
   },
   {
-    src: "/post3.svg",
+    src: "/post3.png",
   },
   {
-    src: "/post4.svg",
+    src: "/post4.png",
   },
 ];
 
@@ -40,7 +40,7 @@ const Instagram = () => {
             priority
             width={500}
             height={300}
-            alt={""}
+            alt={"image"}
           />
         ))}
       </div>

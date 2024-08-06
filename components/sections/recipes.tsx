@@ -6,7 +6,11 @@ import { Button } from "../ui/button";
 import { combinedRecipes } from "../array";
 import Link from "next/link";
 
-const Recipes = () => {
+interface Id {
+  id: string;
+}
+
+const Recipes: React.FC<Id> = ({ id }) => {
   const [recipes, setRecipes] = useState(combinedRecipes[0]);
 
   const toggleLike = (index: number) => {
@@ -18,7 +22,7 @@ const Recipes = () => {
   };
 
   return (
-    <section className="px-[68px] flex flex-col gap-12">
+    <section id={id} className="scroll-smoth px-[68px] flex flex-col gap-12">
       <div className="flex flex-col gap-8 justify-center items-center">
         <h1 className="text-[#000000] text-center text-5xl font-semibold">
           Simple and tasty recipe
@@ -40,7 +44,7 @@ const Recipes = () => {
                 key={index}
                 src={r.src}
                 className={""}
-                alt={""}
+                alt={"image"}
               />
             );
           }

@@ -27,9 +27,9 @@ const LearnMore = () => {
           width={500}
           height={300}
           priority
-          src={"/learnmore.svg"}
+          src={"/learnmore.png"}
           className={"w-full"}
-          alt={""}
+          alt={"image"}
         />
       </div>
     </section>

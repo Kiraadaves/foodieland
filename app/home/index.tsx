@@ -87,7 +87,7 @@ const HomePage = () => {
         </div>
       </section>
       <Categories />
-      <Recipes />
+      <Recipes id="recipe"/>
       <LearnMore />
       <Instagram />
       <MoreRecipes />

@@ -30,17 +30,17 @@ const Subscribe = () => {
           width={500}
           height={300}
           priority
-          src={"/right.svg"}
-          className={"absolute right-0 bottom-0 h-48 w-48 rounded-br-[60px]"}
-          alt={""}
+          src={"/right.png"}
+          className={"absolute right-0 bottom-0 h-48 w-64 rounded-br-[60px]"}
+          alt={"image"}
         />
         <Image
           width={500}
           height={300}
           priority
-          src={"/left.svg"}
+          src={"/left.png"}
           className={"absolute left-0 bottom-0 h-64 w-64 rounded-bl-[60px]"}
-          alt={""}
+          alt={"image"}
         />
       </div>
     </section>

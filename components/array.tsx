@@ -13,7 +13,7 @@ const recipe1: Recipe[] = [
   {
     id: 0,
     favorite: true,
-    src: "/burger.svg",
+    src: "/cheeseburger.png",
     text1: "Big and Juicy Wagyu Beef",
     text2: "Cheeseburger",
     meal: "Snack",
@@ -23,7 +23,7 @@ const recipe1: Recipe[] = [
   {
     id: 1,
     favorite: false,
-    src: "/salmon.svg",
+    src: "/salmon.png",
     text1: "Fresh Lime Roasted Salmon with",
     text2: "Ginger Sauce",
     meal: "Fish",
@@ -33,7 +33,7 @@ const recipe1: Recipe[] = [
   {
     id: 2,
     favorite: false,
-    src: "/pancake.svg",
+    src: "/pancakes.png",
     text1: "Strawberry Oatmeal Pancake",
     text2: "with Honey Syrup",
     meal: "Breakfast",
@@ -43,7 +43,7 @@ const recipe1: Recipe[] = [
   {
     id: 3,
     favorite: true,
-    src: "/mayonnaise.svg",
+    src: "/salad.png",
     text1: "Fresh and Healthy Mixed",
     text2: "Mayonnaise Salad",
     meal: "Healthy",
@@ -53,7 +53,7 @@ const recipe1: Recipe[] = [
   {
     id: 4,
     favorite: false,
-    src: "/meatballs.svg",
+    src: "/meetballs.png",
     text1: "Chicken Meatballs with Cream",
     text2: "Cheese",
     meal: "Meat",
@@ -73,7 +73,7 @@ const recipe1: Recipe[] = [
   {
     id: 6,
     favorite: true,
-    src: "/pancake.svg",
+    src: "/fruitypancake.png",
     text1: "Fruity Pancake with Orange &",
     text2: "Blueberry",
     meal: "Sweet",
@@ -83,7 +83,7 @@ const recipe1: Recipe[] = [
   {
     id: 7,
     favorite: false,
-    src: "/chicken.svg",
+    src: "/rice.png",
     text1: "The Best Easy One Pot Chicken",
     text2: "and Rice",
     meal: "Snack",
@@ -93,7 +93,7 @@ const recipe1: Recipe[] = [
   {
     id: 8,
     favorite: false,
-    src: "/pasta.svg",
+    src: "/pasta.png",
     text1: "The Creamiest Creamy Chicken",
     text2: "and Bacon Pasta",
     meal: "Noodles",
@@ -106,7 +106,7 @@ const recipe2: Recipe[] = [
   {
     id: 0,
     favorite: true,
-    src: "/recipe1.svg",
+    src: "/recipe1.png",
     text1: "Mixed Tropical Fruit Salad with",
     text2: "Superfood Boosts",
     meal: "Health",
@@ -116,7 +116,7 @@ const recipe2: Recipe[] = [
   {
     id: 1,
     favorite: false,
-    src: "/recipe2.svg",
+    src: "/recipe2.png",
     text1: "Big and Juicy Wagyu Beef",
     text2: "Cheeseburger",
     meal: "Western",
@@ -126,7 +126,7 @@ const recipe2: Recipe[] = [
   {
     id: 2,
     favorite: true,
-    src: "/recipe3.svg",
+    src: "/recipe3.png",
     text1: "Healthy Japanese Fried Rice with",
     text2: "Asparagus",
     meal: "Healthy",
@@ -136,7 +136,7 @@ const recipe2: Recipe[] = [
   {
     id: 3,
     favorite: false,
-    src: "/recipe4.svg",
+    src: "/recipe4.png",
     text1: "Cauliflower Walnut Vegeterian Taco Meat",
     text2: "",
     meal: "Eastern",
@@ -146,7 +146,7 @@ const recipe2: Recipe[] = [
   {
     id: 4,
     favorite: true,
-    src: "/recipe5.svg",
+    src: "/recipe5.png",
     text1: "Rainbow Chicken Salad with",
     text2: "Almond Honey Mustard Dressing",
     meal: "Healthy",
@@ -157,7 +157,7 @@ const recipe2: Recipe[] = [
   {
     id: 5,
     favorite: false,
-    src: "/recipe6.svg",
+    src: "/recipe6.png",
     text1: "Barbecue Spicy Sandwiches",
     text2: "with Chips",
     meal: "Snack",
@@ -167,7 +167,7 @@ const recipe2: Recipe[] = [
   {
     id: 6,
     favorite: false,
-    src: "/recipe7.svg",
+    src: "/recipe7.png",
     text1: "Firecracker Vegan Lettuce Wraps-",
     text2: "Spicy!",
     meal: "Seafood",
@@ -177,7 +177,7 @@ const recipe2: Recipe[] = [
   {
     id: 7,
     favorite: true,
-    src: "/recipe8.svg",
+    src: "/recipe8.png",
     text1: "Chicken Ramen Soup with",
     text2: "Mushroom",
     meal: "Japanese",

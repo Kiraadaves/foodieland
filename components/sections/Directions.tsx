@@ -25,9 +25,9 @@ const Directions = () => {
               width={500}
               height={300}
               priority
-              src={"/directions.svg"}
+              src={"/directions.png"}
               className={"w-full"}
-              alt={""}
+              alt={"image"}
             />
             <p className="text-[#00000099] text-base leading-[26px]">
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
