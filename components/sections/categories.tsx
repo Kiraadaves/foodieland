@@ -74,14 +74,26 @@ const Categories = () => {
               {" "}
               <div className="flex flex-col  justify-between h-48 absolute bottom-[20%]">
                 {" "}
-                <Image
-                 width={500}
-                  height={300}
-                  priority
-                  src={category.src}
-                  alt={category.alt}
-                  className={"h-[7.5rem] w-[7.5rem]  "}
-                />
+                <div className="className='before:blur-lg before:translate-x-3 before:translate-y-5'">
+                  <div className="relative">
+                    <Image
+                      width={500}
+                      height={300}
+                      priority
+                      src={category.src}
+                      alt={category.alt}
+                      className={"h-[7.5rem] w-[7.5rem]  "}
+                    />
+                    <Image
+                      width={500}
+                      height={300}
+                      priority
+                      src={category.src}
+                      alt={category.alt}
+                      className={"h-[7.5rem] w-[7.5rem] absolute left-5 top-6 opacity-[50%] -z-10 blur-lg "}
+                    />
+                  </div>
+                </div>
                 <p className="text-center  text-lg font-semibold">
                   {category.name}
                 </p>

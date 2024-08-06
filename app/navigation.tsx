@@ -1,7 +1,7 @@
 import React from "react";
-import { Foodieland } from "./svg";
+import { Foodieland } from "../components/svg";
 import Link from "next/link";
-import { Socials } from "./links";
+import { Socials } from "../components/links";
 
 const Navigation = () => {
   return (
@@ -12,7 +12,7 @@ const Navigation = () => {
       <nav>
         <ul className="flex gap-12 text-[#000000] font-medium text-base">
           <li>
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
             <Link href="/recipe">Recipe</Link>
